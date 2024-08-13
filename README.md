@@ -66,11 +66,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For any questions or suggestions, please reach out to:
 
 - **Esther Uduma** - estheruduma23@gmail.com
-<<<<<<< HEAD
-- **Mmesoma Anisiuba** - ?????
+- **Mmesoma Anisiuba** - anisiubammesoma8@gmail.com
 
 ## Youtube Link
 https://www.youtube.com/watch?v=8iAQ1h30n5I
-=======
-- **Mmesoma Anisiuba** - anisiubammesoma8@gmail.com
->>>>>>> af1905c1793866bbce1e43200cca9e919cd601af
