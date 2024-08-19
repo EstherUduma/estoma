@@ -2,7 +2,11 @@
 :root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
-  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
   --whiteColor: hsl(0, 0%, 100%);
   --blackColor: hsl(201, 33%, 16%);
   --textColor: hsl(240, 4%, 30%);
@@ -20,7 +24,7 @@
   justify-content: space-between;
   background: var(--whiteColorDeam);
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 3rem;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
 }
@@ -35,6 +39,10 @@
   font-size: 25px;
   color: var(--PrimaryColor);
   transform: translateY(5px);
+}
+.header .closeNavbar,
+.header .toggleNavbar {
+  display: none;
 }
 @media screen and (max-width: 768px) {
   .header .navBar {
@@ -79,6 +87,7 @@
     color: var(--whiteColor);
   }
   .header .navBar .closeNavbar {
+    display: block;
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -89,6 +98,9 @@
   }
   .header .activeNavbar {
     top: 7rem;
+  }
+  .header .toggleNavbar {
+    display: block;
   }
 }
 .header .toggleNavbar .icon {

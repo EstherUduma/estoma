@@ -18,11 +18,11 @@ const Navbar = () => {
 
   return (
     <section className="navBarSection">
-      <header className="header flex">
+      <header className="header">
         {/* logo */}
         <div className="logoDiv">
           <a href="#" className="logo flex">
-            <h1>
+            <h1 className="flex">
               ESTOMA <MdOutlineTravelExplore className="icon" /> TRAVELS{" "}
             </h1>
           </a>
@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* navBar */}
         <div className={active}>
-          <ul className="navLists flex">
+          <ul className="navLists flex space-x-7">
             <li className="navItem">
               <a href="#" className="navLink">
                 Home
@@ -78,12 +78,12 @@ const Navbar = () => {
             </button>
           </ul>
 
-          <div onClick={removeNavbar} className="closeNavbar">
+          <div onClick={removeNavbar} className="lg:hidden closeNavbar">
             <AiFillCloseCircle className="icon" />
           </div>
         </div>
 
-        <div onClick={showNav} className="toggleNavbar">
+        <div onClick={showNav} className="lg:hidden toggleNavbar">
           <TbGridDots className="icon" />
         </div>
       </header>
