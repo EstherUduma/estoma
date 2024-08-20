@@ -2,11 +2,7 @@
 :root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
-  --gradientColor: linear-gradient(
-    to right,
-    hsl(187, 85%, 43%),
-    hsl(199, 100%, 33%)
-  );
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
   --whiteColor: hsl(0, 0%, 100%);
   --blackColor: hsl(201, 33%, 16%);
   --textColor: hsl(240, 4%, 30%);
@@ -25,7 +21,6 @@
   justify-content: center;
   margin: auto;
 }
-
 .home .overlay {
   position: absolute;
   height: 100%;
@@ -36,7 +31,6 @@
   z-index: 1;
   mix-blend-mode: hard-light;
 }
-
 .home video {
   position: absolute;
   height: 100%;
@@ -44,9 +38,8 @@
   top: 0;
   bottom: 0;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-
 .home .homeContent {
   width: 100%;
   height: -webkit-max-content;
@@ -62,22 +55,17 @@
   color: var(--whiteColor);
   z-index: 100;
 }
-
 .home .homeContent .textDiv {
   padding: 2rem 0;
 }
-
 .home .homeContent .textDiv .smallText {
   font-size: 13px;
   text-transform: uppercase;
 }
-
 .home .homeContent .textDiv .homeTitle {
   position: relative;
   font-size: 1.8rem;
-  font-weight: bold;
 }
-
 .home .homeContent .cardDiv {
   position: relative;
   padding: 2rem 1rem;
@@ -85,7 +73,6 @@
   border-radius: 10px;
   gap: 1rem;
 }
-
 .home .homeContent .cardDiv label {
   display: block;
   color: var(--textColor);
@@ -93,25 +80,21 @@
   font-size: 13px;
   font-weight: 500;
 }
-
 .home .homeContent .cardDiv .label_total {
   justify-content: space-between;
   align-items: center;
 }
-
 .home .homeContent .cardDiv .label_total .total {
   color: var(--textColor);
   font-size: 18px;
   padding-bottom: 10px;
 }
-
 .home .homeContent .cardDiv .input {
   height: 40px;
   padding: 0 1rem;
   background: var(--inputColor);
   border-radius: 3rem;
 }
-
 .home .homeContent .cardDiv .input input {
   background: none;
   border: none;
@@ -120,25 +103,20 @@
   font-size: 13px;
   font-weight: 500;
 }
-
 .home .homeContent .cardDiv .input input::-moz-placeholder {
   font-size: 13px;
 }
-
 .home .homeContent .cardDiv .input input::placeholder {
   font-size: 13px;
 }
-
 .home .homeContent .cardDiv .input .icon {
   font-size: 18px;
   color: var(--PrimaryColor) !important;
   margin-left: 10px;
 }
-
 .home .homeContent .cardDiv .input .input[type=range] {
   background: blue;
 }
-
 .home .homeContent .cardDiv .searchOptions {
   position: absolute;
   background: var(--gradientColor);
@@ -155,31 +133,25 @@
   justify-content: center;
   cursor: pointer;
 }
-
 .home .homeContent .cardDiv .searchOptions:hover {
   background: var(--PrimaryColor);
 }
-
 .home .homeContent .cardDiv .searchOptions .icon {
   font-size: 18px;
 }
-
 .home .homeContent .cardDiv .searchOptions span {
   font-size: 11px;
 }
-
 .home .homeContent .homeFooterIcons {
   width: 100%;
   justify-content: space-between;
 }
-
 .home .homeContent .homeFooterIcons .icon {
   font-size: 20px;
   margin: 0 5px;
   color: var(--whiteColor);
   font-weight: 600;
 }
-
 .home .homeContent .homeFooterIcons .icon:hover {
   color: var(--PrimaryColor);
 }
