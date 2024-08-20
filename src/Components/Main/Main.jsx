@@ -2,7 +2,7 @@ import React from "react";
 import './main.css'
 
 //Array map named data
-const Data = [
+{/*const Data = [
     {
         id:1,
         imgSrc: img,
@@ -82,7 +82,7 @@ const Data = [
         fees: '$900',
         description: 'An immense mausoleum of white marble '
     }
-]
+] */}
 
 const Main = () => {
     return (
