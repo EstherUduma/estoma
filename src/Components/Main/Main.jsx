@@ -1,8 +1,10 @@
 import React from "react";
 import './main.css'
 
+import img from '../../Assets/img(1).jpeg'
+
 //Array map named data
-{/*const Data = [
+const Data = [
     {
         id:1,
         imgSrc: img,
@@ -13,7 +15,7 @@ import './main.css'
         description: 'The epitome of romance, Bora Bora  is one of the best travel destinations in the world. This place is known for its luxurious stays and adventurous activities.'
     },
 
-    {
+    /*{
         id:2,
         imgSrc: img2,
         destTitle: 'Machu Picchu',
@@ -80,9 +82,19 @@ import './main.css'
         location: 'India',
         grade: 'CULTURAL RELAX',
         fees: '$900',
-        description: 'An immense mausoleum of white marble '
-    }
-] */}
+        description: 'An immense mausoleum of white marble, built-in Agra by Mughal emperor Shah Jahan in memory of his wife Muntaz, the monument is  breathtakingly beautiful. This place is known for its luxurious stays and adventurous activities'
+    },
+
+    {
+        id:9,
+        imgSrc: img9,
+        destTitle: 'Bali Island',
+        location: 'Indonesia',
+        grade: 'CULTURAL RELAX',
+        fees: '$500',
+        description: 'Bali is an Indonesian Island and one of the best holiday destinations in the Indonesian archipelago. Bali is known for its volcanic mountains, history, art & culture, food, temples and beautiful sandy beaches.'
+    }*/
+]
 
 const Main = () => {
     return (
@@ -93,8 +105,21 @@ const Main = () => {
                 </h3>
             </div>
 
-            <div className="secContent">
+            <div className="secContent grid">
                 {/* Using high array method (map) */}
+                {
+                    Data.map(({id, imgSrc, destTitle, location, grade, fees, description})=>{
+                        return (
+                            <div key={id} className="singleDestination">
+                                {/* Returns single  id  from the map array */}
+
+                                <div className="imageDiv">
+                                    <img src={img} alt="" />
+                                </div>
+                            </div>
+                        )
+                    })
+                }
 
             </div>
         </section>
