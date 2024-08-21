@@ -1,9 +1,13 @@
 import React from "react";
 import './main.css'
-
+// Images
 import img from '../../Assets/img(1).jpeg'
+// Import icons
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { HiOutlineClipboardCheck } from "react-icons/hi";
 
-//Array map named data
+
+// Array map named data
 const Data = [
     {
         id:1,
@@ -114,7 +118,32 @@ const Main = () => {
                                 {/* Returns single  id  from the map array */}
 
                                 <div className="imageDiv">
-                                    <img src={img} alt="" />
+                                    <img src={imgSrc} alt={destTitle} />
+                                </div>
+
+                                <div className="cardInfo">
+                                    <h4 className="destTitle">{destTitle}</h4>
+                                    <span className="continent flex">
+                                        <HiOutlineLocationMarker className="icon"/>
+                                        <span className="name">{location}</span>
+                                    </span>
+
+                                    <div className="fees flex">
+                                        <div className="grade">
+                                            <span>{grade}<small>+1</small></span>
+                                        </div>
+                                        <div className="price">
+                                            <h5>{fees}</h5>
+                                        </div>
+                                    </div>
+
+                                    <div className="desc">
+                                        <p>{description}</p>
+                                    </div>
+
+                                    <button className="btn flex">
+                                        DETAILS <HiOutlineClipboardCheck className="icon"/>
+                                    </button>
                                 </div>
                             </div>
                         )
