@@ -40,7 +40,6 @@
   .header .navBar {
     position: absolute;
     background: var(--whiteColorDeam);
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     width: 80%;
@@ -97,5 +96,4 @@
 }
 .header .toggleNavbar:hover.icon {
   color: var(--SecondaryColor);
-}
-/*# sourceMappingURL=navbar.css.map */
+}/*# sourceMappingURL=navbar.css.map */
