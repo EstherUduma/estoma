@@ -18,7 +18,6 @@
 }
 .main .secTitle .title {
   position: relative;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   color: var(--textColor);
@@ -154,5 +153,4 @@
   .secContent .singleDestination {
     height: auto;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

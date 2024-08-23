@@ -44,7 +44,6 @@
 }
 .footer .secContent {
   width: 100%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   padding: 2rem initial;
@@ -208,7 +207,6 @@
     justify-content: space-between;
   }
   .footer .secContent .contactDiv .inputDiv {
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     flex-direction: row;
@@ -218,7 +216,6 @@
     width: 60%;
   }
   .footer .secContent .contactDiv .inputDiv .btn {
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -258,5 +255,4 @@
     font-size: 16px;
     padding: 5px 0;
   }
-}
-/*# sourceMappingURL=footer.css.map */
+}/*# sourceMappingURL=footer.css.map */

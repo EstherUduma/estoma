@@ -42,7 +42,6 @@
 }
 .home .homeContent {
   width: 100%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   padding: 8rem 1.5rem 3rem;
@@ -120,7 +119,6 @@
 .home .homeContent .cardDiv .searchOptions {
   position: absolute;
   background: var(--gradientColor);
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   bottom: -0.7rem;
@@ -163,7 +161,6 @@
   .home .homeContent .textDiv .homeTitle {
     position: relative;
     font-size: 2.3rem;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -214,5 +211,4 @@
   .home .homeContent .cardDiv .searchOptions span {
     font-size: 17px;
   }
-}
-/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=home.css.map */
