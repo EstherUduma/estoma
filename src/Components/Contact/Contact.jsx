@@ -7,22 +7,37 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [responseMessage, setResponseMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    alert('Form submitted!');
-    // Optionally clear the form data
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const result = await response.json();
+      setResponseMessage(result.message);
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error during form submission:', error);
+      setResponseMessage('An error occurred while sending the message');
+    }
   };
 
   return (
@@ -61,6 +76,7 @@ const Contact = () => {
           </label>
           <button type="submit">Send</button>
         </form>
+        {responseMessage && <p>{responseMessage}</p>}
       </div>
     </section>
   );
