@@ -269,10 +269,47 @@
         .secContent {
             .footerCard {
                 flex-direction: row;
-                
+
                 .footerLinks {
                     grid-template-columns: repeat(3, 1fr);
                     padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        .secContent {
+            .footerCard {
+                padding: 3rem 1rem;
+
+                .footerIntro {
+                    .footerParagraph {
+                        font-size: 15px;
+                        color: var(--textColor);
+                    }
+
+                    .footerSocials {
+                        column-gap: .5rem;
+                        .icon {
+                            color: var(--textColor);
+                            font-size: 25px;
+                            &:hover {
+                                color: var(--PrimaryColor);
+                            }
+                        }
+                    }
+                }
+
+                .footerLinks {
+                    .linkGroup {
+                        .footerList {
+                            font-size: 16px;
+                            padding: 5px 0;
+                        }
+                    }
                 }
             }
         }
