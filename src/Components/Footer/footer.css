@@ -223,25 +223,16 @@
     width: max-content;
   }
 }
-@media screen and (min-width: 660px) {
-  .footer .secContent .contactDiv {
+@media screen and (min-width: 840px) {
+  .footer {
+    padding: 5rem 0;
+  }
+  .footer .secContent .footerCard {
     flex-direction: row;
-    justify-content: space-between;
   }
-  .footer .secContent .contactDiv .inputDiv {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .footer .secContent .contactDiv .inputDiv input {
-    width: 60%;
-  }
-  .footer .secContent .contactDiv .inputDiv .btn {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+  .footer .secContent .footerCard .footerLinks {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=footer.css.map */

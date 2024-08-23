@@ -263,25 +263,16 @@
     }
 }
 
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 840px) {
     .footer {
+        padding: 5rem 0;
         .secContent {
-            .contactDiv {
+            .footerCard {
                 flex-direction: row;
-                justify-content: space-between;
-
-                .inputDiv {
-                    width: max-content;
-                    flex-direction: row;
-                    justify-content: flex-start;
-
-                    input {
-                        width: 60%;
-                    }
-
-                    .btn {
-                        width: max-content;
-                    }
+                
+                .footerLinks {
+                    grid-template-columns: repeat(3, 1fr);
+                    padding-bottom: 1rem;
                 }
             }
         }
