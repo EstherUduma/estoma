@@ -1,7 +1,15 @@
 import React from "react";
 import './main.css'
 // Images
-import img from '../../Assets/img(1).jpeg'
+import img from '../../Assets/img(1).jpg'
+import img2 from '../../Assets/img(2).jpg'
+import img3 from '../../Assets/img(3).webp'
+import img4 from '../../Assets/img(4).webp'
+import img5 from '../../Assets/img(5).jpg'
+import img6 from '../../Assets/img(6).jpg'
+import img7 from '../../Assets/img(7).jpeg'
+import img8 from '../../Assets/img(8).webp'
+import img9 from '../../Assets/img(9).webp'
 // Import icons
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { HiOutlineClipboardCheck } from "react-icons/hi";
@@ -19,7 +27,7 @@ const Data = [
         description: 'The epitome of romance, Bora Bora  is one of the best travel destinations in the world. This place is known for its luxurious stays and adventurous activities.'
     },
 
-    /*{
+    {
         id:2,
         imgSrc: img2,
         destTitle: 'Machu Picchu',
@@ -29,7 +37,7 @@ const Data = [
         description: 'Huayna  Picchu is a mountain in Peru, rising over Machu Picchu, the so-called Lost City of Incas. This place is popular among tourists as the sunrise from the Sun Gate is simply spectacular.' 
     },
 
-    /*{
+    {
         id:3,
         imgSrc: img3,
         destTitle: 'Great Barrier Reef',
@@ -97,7 +105,7 @@ const Data = [
         grade: 'CULTURAL RELAX',
         fees: '$500',
         description: 'Bali is an Indonesian Island and one of the best holiday destinations in the Indonesian archipelago. Bali is known for its volcanic mountains, history, art & culture, food, temples and beautiful sandy beaches.'
-    }*/
+    }
 ]
 
 const Main = () => {
