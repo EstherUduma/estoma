@@ -213,3 +213,77 @@
         }
     }
 }
+
+//Media Query
+@media screen and (min-width: 500px) {
+    .footer {
+        .secContent {
+            .footerCard {
+                .footerLinks {
+                    grid-template-columns: repeat(3, 1fr);
+                    padding-bottom: 1rem;
+                }
+
+                .footerDiv {
+                    justify-content: space-between;
+                    flex-direction: row;
+
+                    small {
+                        font-size: 14px;
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .footer {
+        .secContent {
+            .contactDiv {
+                flex-direction: row;
+                justify-content: space-between;
+
+                .inputDiv {
+                    width: max-content;
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    input {
+                        width: 60%;
+                    }
+
+                    .btn {
+                        width: max-content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .footer {
+        .secContent {
+            .contactDiv {
+                flex-direction: row;
+                justify-content: space-between;
+
+                .inputDiv {
+                    width: max-content;
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    input {
+                        width: 60%;
+                    }
+
+                    .btn {
+                        width: max-content;
+                    }
+                }
+            }
+        }
+    }
+}
