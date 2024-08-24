@@ -6,18 +6,16 @@ This project is a comprehensive travel and tours platform designed to enhance th
 
 ## Features
 
-- **User Authentication:** Secure login and registration.
 - **Search Functionality:** Efficient search for destinations and tours.
-- **Booking System:** Easy booking process with integrated payment solutions.
 - **Travel Guides:** Detailed information on destinations and travel tips.
 - **Responsive Design:** Accessible on both desktop and mobile devices.
 
 ## Technologies Used
 
-- **Frontend:** React, HTML, CSS
-- **Backend:** Node.js, Express
+- **Frontend:** React, SASS
+- **Backend:** Node.js, Express.js
 - **Database:** MongoDB
-- **Others:** Git, Docker, Google Maps API, Stripe, Twilio
+- **Others:** Git, AOS (Animate On Scroll): Integrated to provide smooth scroll animations, enhancing user interaction and visual appeal.
 
 ## Getting Started
 
@@ -33,7 +31,7 @@ This project is a comprehensive travel and tours platform designed to enhance th
 
    ```bash
    git clone https://github.com/EstherUduma/travel-and-tours.git
-   cd travel-and-tours
+   cd estoma
    ```
 
 2. Install the dependencies:
@@ -55,11 +53,7 @@ This project is a comprehensive travel and tours platform designed to enhance th
 
 - Navigate to `http://localhost:3000` in your browser to access the application.
 - Use the search feature to find destinations and tours.
-- Register or log in to book trips and access personalized features.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+- Use the contact form to get in touch with estoma
 
 ## Authors
 
@@ -67,7 +61,3 @@ For any questions or suggestions, please reach out to:
 
 - **Esther Uduma** - estheruduma23@gmail.com
 - **Mmesoma Anisiuba** - anisiubammesoma8@gmail.com
-
-## Youtube Link
-
-https://www.youtube.com/watch?v=309beMyhXtg
