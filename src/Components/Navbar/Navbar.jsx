@@ -48,7 +48,7 @@ const Navbar = () => {
                         </li>
 
                         <button className='btn'>
-                            <a href="#home">BOOK NOW</a>
+                            <a href="#contact">CONTACT US TO BOOK NOW</a>
                         </button>
                     </ul>
 

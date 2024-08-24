@@ -21,7 +21,7 @@ import 'aos/dist/aos.css'
 // Array map named data
 const Data = [
     {
-        id:1,
+        id: 1,
         imgSrc: img,
         destTitle: 'Bora Bora',
         location: 'New Zealand',
@@ -31,17 +31,17 @@ const Data = [
     },
 
     {
-        id:2,
+        id: 2,
         imgSrc: img2,
         destTitle: 'Machu Picchu',
         location: 'Peru',
         grade: 'CULTURAL RELAX',
         fees: '$600',
-        description: 'Huayna  Picchu is a mountain in Peru, rising over Machu Picchu, the so-called Lost City of Incas. This place is popular among tourists as the sunrise from the Sun Gate is simply spectacular.' 
+        description: 'Huayna  Picchu is a mountain in Peru, rising over Machu Picchu, the so-called Lost City of Incas. This place is popular among tourists as the sunrise from the Sun Gate is simply spectacular.'
     },
 
     {
-        id:3,
+        id: 3,
         imgSrc: img3,
         destTitle: 'Great Barrier Reef',
         location: 'Australia',
@@ -51,7 +51,7 @@ const Data = [
     },
 
     {
-        id:4,
+        id: 4,
         imgSrc: img4,
         destTitle: 'Cappadocia',
         location: 'Turkey',
@@ -61,7 +61,7 @@ const Data = [
     },
 
     {
-        id:5,
+        id: 5,
         imgSrc: img5,
         destTitle: 'Guanajuato',
         location: 'Mexico',
@@ -71,7 +71,7 @@ const Data = [
     },
 
     {
-        id:6,
+        id: 6,
         imgSrc: img6,
         destTitle: 'Cinque Terre',
         location: 'Italy',
@@ -81,17 +81,17 @@ const Data = [
     },
 
     {
-        id:7,
+        id: 7,
         imgSrc: img7,
         destTitle: 'Angkor Wat',
         location: 'Cambodia',
         grade: 'CULTURAL RELAX',
         fees: '$790',
-        description: 'Angkot wat represents  the entire range of Khmer art from the 9th to the 15th century. This temple is considered the  heart and soul of Cambodia. This place is known for its luxurious stays and adventurous activities.' 
+        description: 'Angkot wat represents  the entire range of Khmer art from the 9th to the 15th century. This temple is considered the  heart and soul of Cambodia. This place is known for its luxurious stays and adventurous activities.'
     },
 
     {
-        id:8,
+        id: 8,
         imgSrc: img8,
         destTitle: 'Taj Mahal',
         location: 'India',
@@ -101,7 +101,7 @@ const Data = [
     },
 
     {
-        id:9,
+        id: 9,
         imgSrc: img9,
         destTitle: 'Bali Island',
         location: 'Indonesia',
@@ -111,10 +111,17 @@ const Data = [
     }
 ]
 
-const Main = () => {
+const Main = ({ filters }) => {
+    const { destination, date, price } = filters;
+    const filteredData = Data.filter((item) => {
+        const isDestinationMatch = destination ? item.destTitle.toLowerCase().includes(destination.toLowerCase()) : true;
+        const isPriceMatch = item.fees.replace('$', '') <= price;
+        return isDestinationMatch && isPriceMatch;
+    });
+
     //React hook for scroll animation
-    useEffect(()=>{
-        Aos.init({duration: 2000})
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
     }, [])
 
 
@@ -129,7 +136,7 @@ const Main = () => {
             <div className="secContent grid">
                 {/* Using high array method (map) */}
                 {
-                    Data.map(({id, imgSrc, destTitle, location, grade, fees, description})=>{
+                    filteredData.map(({ id, imgSrc, destTitle, location, grade, fees, description }) => {
                         return (
                             <div key={id} data-aos="fade-up" className="singleDestination">
                                 {/* Returns single  id  from the map array */}
@@ -141,7 +148,7 @@ const Main = () => {
                                 <div className="cardInfo">
                                     <h4 className="destTitle">{destTitle}</h4>
                                     <span className="continent flex">
-                                        <HiOutlineLocationMarker className="icon"/>
+                                        <HiOutlineLocationMarker className="icon" />
                                         <span className="name">{location}</span>
                                     </span>
 
@@ -158,9 +165,11 @@ const Main = () => {
                                         <p>{description}</p>
                                     </div>
 
-                                    <button className="btn flex">
-                                        DETAILS <HiOutlineClipboardCheck className="icon"/>
-                                    </button>
+                                    <a href="#contact">
+                                        <button className="btn flex">
+                                            CONTACT US TO BOOK <HiOutlineClipboardCheck className="icon" />
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         )

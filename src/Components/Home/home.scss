@@ -99,28 +99,40 @@
                 padding: 0 1rem;
                 background: var(--inputColor);
                 border-radius: 3rem;
+                display: flex;
+                align-items: center;
+                border: 1px solid var(--inputColor); /* Border color matching the input background */
 
-                input {
+                input,
+                select {
                     background: none;
                     border: none;
                     outline: none;
                     width: 100%;
                     font-size: 13px;
                     font-weight: 500;
-                    &::placeholder {
+                    color: var(--textColor);
+                    border-radius: 3rem; /* Ensure consistent border-radius */
+                }
+
+                select {
+                    -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+                    -moz-appearance: none; /* Remove default styling in Firefox */
+                    appearance: none; /* Remove default styling in other browsers */
+                    background: var(--inputColor);
+                    padding: 0 1rem;
+                    cursor: pointer;
+                    border: 1px solid var(--PrimaryColor); /* Border color matching the previous search background */
+
+                    option {
                         font-size: 13px;
                     }
                 }
 
-                .icon  {
+                .icon {
                     font-size: 18px;
-                    color: var(--PrimaryColor)
-                    !important;
+                    color: var(--PrimaryColor);
                     margin-left: 10px;
-                }
-
-                .input[type=range] {
-                    background: blue;
                 }
             }
 

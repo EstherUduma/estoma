@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import './home.css'
 import video from '../../Assets/video0.mp4'
 import { GrLocation } from "react-icons/gr";
@@ -12,11 +12,46 @@ import { TbApps } from "react-icons/tb";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-const Home = () => {
+// Array of destinations for the dropdown
+const destinations = [
+    'Bora Bora',
+    'Machu Picchu',
+    'Great Barrier Reef',
+    'Cappadocia',
+    'Guanajuato',
+    'Cinque Terre',
+    'Angkor Wat',
+    'Taj Mahal',
+    'Bali Island'
+];
+
+const Home = ({ onFilterChange }) => {
+    const [formData, setFormData] = useState({
+        destination: '',
+        date: '',
+        price: 5000
+    });
+
+    // Handler for input changes
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    // Handler for form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onFilterChange(formData); // Call the callback with updated filters
+    };
+
     //React hook for scroll animation
-    useEffect(()=>{
-        Aos.init({duration: 2000})
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
     }, [])
+
 
 
     return (
@@ -33,11 +68,22 @@ const Home = () => {
                     </h1>
                 </div>
 
-                <div data-aos="fade-up" className="cardDiv grid">
+                <form onSubmit={handleSubmit} data-aos="fade-up" className="cardDiv grid">
                     <div className="destinationInput">
                         <label htmlFor="city">Search your destination:</label>
                         <div className="input flex">
-                            <input type="text" placeholder="Enter name here...." />
+                            <select
+                                name="destination"
+                                value={formData.destination}
+                                onChange={handleChange}
+                            >
+                                <option value="">Select a destination</option>
+                                {destinations.map(dest => (
+                                    <option key={dest} value={dest}>
+                                        {dest}
+                                    </option>
+                                ))}
+                            </select>
                             <GrLocation className="icon" />
                         </div>
                     </div>
@@ -45,25 +91,37 @@ const Home = () => {
                     <div className="dateInput">
                         <label htmlFor="date">Search your date:</label>
                         <div className="input flex">
-                            <input type="date" />
+                            <input
+                                type="date"
+                                name="date"
+                                value={formData.date}
+                                onChange={handleChange}
+                            />
                         </div>
                     </div>
 
                     <div className="priceInput">
                         <div className="label_total flex">
                             <label htmlFor="price">Max  price:</label>
-                            <h3 className="total">$5000</h3>
+                            <h3 className="total">${formData.price}</h3>
                         </div>
                         <div className="input flex">
-                            <input type="range" max="5000" min="1000" />
+                            <input
+                                type="range"
+                                name="price"
+                                max="5000"
+                                min="500"
+                                value={formData.price}
+                                onChange={handleChange}
+                            />
                         </div>
                     </div>
 
-                    <div className="searchOptions flex">
-                        <HiFilter className="icon" />
-                        <span>MORE FILTERS</span>
-                    </div>
-                </div>
+                    <button className="searchOptions flex">
+                        <HiFilter className="icon" onClick={handleSubmit} />
+                        <span>APPLY FILTERS</span>
+                    </button>
+                </form>
 
                 <div data-aos="fade-up" className="homeFooterIcons flex">
                     <div className="rightIcons">
@@ -78,7 +136,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 
