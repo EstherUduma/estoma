@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/estoma/static/css/main.24479cc5.css",
+    "main.js": "/estoma/static/js/main.e91bbda5.js",
+    "static/media/video0.mp4": "/estoma/static/media/video0.b23619771696bbecc39a.mp4",
+    "static/media/img(7).jpeg": "/estoma/static/media/img(7).71aad9af90a471f3b6d3.jpeg",
+    "static/media/img(3).webp": "/estoma/static/media/img(3).31b42fbf3129eee55897.webp",
+    "static/media/img(6).jpg": "/estoma/static/media/img(6).62d1233183ba4ade7302.jpg",
+    "static/media/img(2).jpg": "/estoma/static/media/img(2).ec33bc6b6da0c2f57f93.jpg",
+    "static/media/img(1).jpg": "/estoma/static/media/img(1).cff0c07ad6094b536842.jpg",
+    "static/media/img(8).webp": "/estoma/static/media/img(8).3a129b230853a3352c8d.webp",
+    "static/media/img(9).webp": "/estoma/static/media/img(9).ec9d7c3303767d205ac7.webp",
+    "static/media/img(5).jpg": "/estoma/static/media/img(5).2c277264122e5373fead.jpg",
+    "static/media/img(4).webp": "/estoma/static/media/img(4).22170dd1f42adaa7fba3.webp",
+    "index.html": "/estoma/index.html",
+    "main.24479cc5.css.map": "/estoma/static/css/main.24479cc5.css.map",
+    "main.e91bbda5.js.map": "/estoma/static/js/main.e91bbda5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24479cc5.css",
+    "static/js/main.e91bbda5.js"
+  ]
+}
